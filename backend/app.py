@@ -1,6 +1,11 @@
 # in backend/app.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 app = FastAPI()
 app.add_middleware(
