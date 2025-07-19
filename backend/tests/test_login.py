@@ -37,7 +37,7 @@ def init_db():
 
 def test_login_success():
     """Correct credentials should yield 200 + bearer token."""
-    res = client.post("/auth/login", json={
+    res = client.post("/auth/login", data={
         "username": "alice",
         "password": "Secret123!"
     })
@@ -49,7 +49,7 @@ def test_login_success():
 
 def test_login_failure():
     """Wrong password must return 401 Unauthorized."""
-    res = client.post("/auth/login", json={
+    res = client.post("/auth/login", data={
         "username": "alice",
         "password": "WrongPassword"
     })
