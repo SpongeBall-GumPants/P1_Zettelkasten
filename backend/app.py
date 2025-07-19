@@ -4,8 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 from sqlmodel import SQLModel, create_engine
-import models   # noqa: F401
-from authentication import router as auth_router
+import backend.db_models   # noqa: F401
+from backend.authentication import router as auth_router
 
 
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
