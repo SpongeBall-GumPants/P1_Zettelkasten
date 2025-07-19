@@ -6,7 +6,7 @@
 ## 📝 Feature Checklist
 > _Update this list before coding each feature._
 - [X] Initial Setup
-- [X] User Authentication
+- [X] User Registration
 - [ ] 
 
 ---
