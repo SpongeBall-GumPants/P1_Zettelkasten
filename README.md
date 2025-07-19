@@ -7,8 +7,8 @@
 > _Update this list before coding each feature._
 - [X] Initial Setup
 - [X] User Registration
+- [X] User Login
 - [ ] 
-
 ---
 
 ## 📖 Table of Contents

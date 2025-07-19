@@ -1,4 +1,4 @@
-# P1_ADR_0001_Authentication
+# Authentication Register
 
 ## Context
 We need a secure, standards-based user authentication mechanism for Synapse:
