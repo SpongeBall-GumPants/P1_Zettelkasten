@@ -6,7 +6,7 @@ from backend.app import app
 import backend.db_models   # noqa: F401, registers your User table
 from backend.db import get_session
 
-# Use your same DATABASE_URL
+
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL, echo=False)
 client = TestClient(app)

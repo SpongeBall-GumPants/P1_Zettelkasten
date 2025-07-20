@@ -5,7 +5,7 @@ from backend.app import app
 import backend.db_models   # noqa: F401
 import sys
 print("python executable:", sys.executable)
-# use the same DATABASE_URL or a test DB
+
 client = TestClient(app)
 engine = create_engine("postgresql://synapse_user:…@localhost/synapse_db")
 
