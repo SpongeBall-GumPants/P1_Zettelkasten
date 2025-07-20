@@ -2,9 +2,9 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 from sqlmodel import SQLModel, create_engine
-from backend.app import app
-import backend.db_models    # noqa: registers User & Note models
-from backend.db import get_session
+from backend.app import app  # Fixed import
+from backend import db_models  # Fixed import
+from backend.db import get_session  # Fixed import
 from passlib.context import CryptContext
 
 
@@ -23,7 +23,7 @@ def init_db_and_token():
     pwd_ctx = CryptContext(schemes=["bcrypt"], deprecated="auto")
     hashed = pwd_ctx.hash("Secret123!")
     with next(get_session()) as session:
-        user = backend.db_models.User(username="alice", email="a@a.com", hashed_password=hashed)
+        user = db_models.User(username="alice", email="a@a.com", hashed_password=hashed)  # Fixed reference
         session.add(user)
         session.commit()
         session.refresh(user)
